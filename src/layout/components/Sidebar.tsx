@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, Home, User, FileText, BarChart2, Table } from 'lucide-react';
-import { ConstRoute } from '../utils/Constant';
+import { ConstRoute } from '../../utils/Constant';
+
 
 const Sidebar: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
