@@ -4,4 +4,5 @@ export const ConstRoute = {
     forms: "/forms",
     charts: "/charts",
     tables: "/tables",
+    login: "/login",
 }

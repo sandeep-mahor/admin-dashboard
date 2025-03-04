@@ -6,6 +6,8 @@ import Profile from '../pages/Profile';
 import Forms from '../pages/Forms';
 import Charts from '../pages/Charts';
 import Tables from '../pages/Tables';
+import AuthLayout from '../layout/AuthLayout';
+import Login from '../pages/auth/Login';
 
 const routes = [
   {
@@ -34,6 +36,17 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/',
+    element: <AuthLayout/>,
+    children: [
+      {
+        path: ConstRoute.login,
+        element: <Login />,
+      },
+    ],
+      
+  }
 ];
 
 const RoutesComponent = () => {
