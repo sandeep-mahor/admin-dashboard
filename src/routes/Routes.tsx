@@ -14,39 +14,20 @@ const routes = [
     path: '/',
     element: <DashboardLayout />,
     children: [
-      {
-        index: true,
-        element: <Dashboard />,
-      },
-      {
-        path: ConstRoute.profile,
-        element: <Profile />,
-      },
-      {
-        path: ConstRoute.forms,
-        element: <Forms />,
-      },
-      {
-        path: ConstRoute.charts,
-        element: <Charts />,
-      },
-      {
-        path: ConstRoute.tables,
-        element: <Tables />,
-      },
+      { index: true, element: <Dashboard /> },
+      { path: ConstRoute.profile, element: <Profile /> },
+      { path: ConstRoute.forms, element: <Forms /> },
+      { path: ConstRoute.charts, element: <Charts /> },
+      { path: ConstRoute.tables, element: <Tables /> },
     ],
   },
   {
-    path: '/',
-    element: <AuthLayout/>,
+    path: '/auth',
+    element: <AuthLayout />,
     children: [
-      {
-        path: ConstRoute.login,
-        element: <Login />,
-      },
+      { path: 'login', element: <Login /> },
     ],
-      
-  }
+  },
 ];
 
 const RoutesComponent = () => {
@@ -55,9 +36,13 @@ const RoutesComponent = () => {
       <Routes>
         {routes.map((route) => (
           <Route key={route.path} path={route.path} element={route.element}>
-            {route.children?.map((child) => (
-              <Route key={route.path} path={child.path} element={child.element} />
-            ))}
+            {route.children?.map((child, index) =>
+              child.index ? (
+                <Route key={`index-${index}`} index element={child.element} />
+              ) : (
+                <Route key={child.path} path={child.path} element={child.element} />
+              )
+            )}
           </Route>
         ))}
       </Routes>
