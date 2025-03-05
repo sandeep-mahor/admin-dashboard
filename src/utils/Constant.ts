@@ -5,4 +5,5 @@ export const ConstRoute = {
     charts: "/charts",
     tables: "/tables",
     login: "/login",
+    signup: "/signup",
 }

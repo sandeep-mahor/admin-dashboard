@@ -8,6 +8,7 @@ import Charts from '../pages/Charts';
 import Tables from '../pages/Tables';
 import AuthLayout from '../layout/AuthLayout';
 import Login from '../pages/auth/Login';
+import SignUP from '../pages/auth/SignUP';
 
 const routes = [
   {
@@ -26,8 +27,10 @@ const routes = [
     element: <AuthLayout />,
     children: [
       { path: 'login', element: <Login /> },
+      
     ],
   },
+  { path: 'signup', element: <SignUP /> },
 ];
 
 const RoutesComponent = () => {

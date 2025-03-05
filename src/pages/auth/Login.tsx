@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { FaFacebookF, FaKey } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Login: React.FC = () => {
 
@@ -27,10 +27,10 @@ const Login: React.FC = () => {
                         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                             Welcome to <span className="text-indigo-600">Login</span>
                         </h2>
-                        <button className="flex items-center justify-center w-full p-2 mb-3 shadow rounded-md text-black-600 hover:bg-gray-100">
+                        <button className="flex items-center justify-center w-full p-2 mb-3 shadow rounded-md text-black-600 hover:bg-gray-200 cursor-pointer">
                             <FcGoogle className="mr-2" /> Login with Google
                         </button>
-                        <button className="flex items-center justify-center w-full p-2 mb-3 shadow rounded-md text-black-600 hover:bg-gray-100">
+                        <button className="flex items-center justify-center w-full p-2 mb-3 shadow rounded-md text-black-600 hover:bg-gray-200 cursor-pointer">
                             <FaFacebookF className="mr-2 text-blue-600" /> Login with Facebook
                         </button>
                         <div className="relative flex items-center my-4">
@@ -39,7 +39,7 @@ const Login: React.FC = () => {
                             <div className="flex-grow border-t border-black-300"></div>
                         </div>
                         <div className="mb-4 relative">
-                            <MdEmail className="absolute left-3 top-3 text-black-600" />
+                            <MdEmail className="absolute left-3 top-3 text-gray-800" />
                             <input
                                 type="email"
                                 placeholder="Email"
@@ -49,7 +49,7 @@ const Login: React.FC = () => {
                             />
                         </div>
                         <div className="mb-4 relative">
-                            <FaKey className="absolute left-3 top-3 text-black-500" />
+                            <FaKey className="absolute left-3 top-3 text-gray-800" />
                             <input
                                 type={showPassword ? "text" : "password"}
                                 placeholder="Password"
@@ -65,16 +65,16 @@ const Login: React.FC = () => {
                             </span>
                         </div>
                         <div className="flex justify-between items-center mb-6">
-                            <label className="flex items-center">
-                                <input type="checkbox" className="mr-2" /> Remember me
+                            <label className="flex items-center cursor-pointer">
+                                <input type="checkbox" className="mr-2 cursor-pointer" /> Remember me
                             </label>
                             <a href="#" className="text-indigo-600 text-sm">Forgot Password?</a>
                         </div>
-                        <button className="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-500">
+                        <button className="w-full bg-gray-800 text-white p-2 rounded-md hover:bg-gray-500 cursor-pointer">
                             Login
                         </button>
                         <p className="mt-4 text-center text-black-600">
-                            Don't have an account? <a href="#" className="text-indigo-600">Register</a>
+                            Don't have an account? <Link to="/signup" className="text-indigo-600">Register</Link>
                         </p>
                     </div>
                 </div>
