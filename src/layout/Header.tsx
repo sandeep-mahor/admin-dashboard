@@ -20,7 +20,7 @@ const Header: React.FC = () => {
                         alt="User"
                         className="w-10 h-10 rounded-full cursor-pointer"
                     />
-                    <span className="text-white font-semibold">Avnish Tomar</span>
+                    <span className="text-white font-semibold text-sm">Avnish Tomar</span>
                 </div>
             </div>
         </header>

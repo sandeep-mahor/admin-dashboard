@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, Home, User, FileText, BarChart2, Table } from 'lucide-react';
-import { ConstRoute } from '../../utils/Constant';
-
+import { ConstRoute } from '../utils/Constant';
 
 const Sidebar: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
@@ -16,11 +15,11 @@ const Sidebar: React.FC = () => {
         <h1 className="text-2xl font-bold text-black uppercase tracking-wide cursor-pointer">
           {sidebarOpen && "Avnish"}
         </h1>
-        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 rounded hover:bg-gray-800 cursor-pointer">
+        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 rounded hover:bg-gray-800 hover:text-white cursor-pointer">
           <Menu size={24} />
         </button>
       </div>
-      <nav className="mt-10 flex flex-col gap-6 ml-2">
+      <nav className="mt-10 flex flex-col gap-3 ml-2 text-sm">
         {[
           { to: "/", label: "Dashboard", icon: <Home size={24} /> },
           { to: ConstRoute.profile, label: "Profile", icon: <User size={24} /> },
