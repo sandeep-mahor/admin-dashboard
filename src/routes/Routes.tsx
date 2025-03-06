@@ -1,14 +1,16 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ConstRoute } from '../utils/Constant';
-import DashboardLayout from '../layout/DashboardLayout';
-import Dashboard from '../pages/Dashboard';
-import Profile from '../pages/Profile';
-import Forms from '../pages/Forms';
-import Charts from '../pages/Charts';
-import Tables from '../pages/Tables';
-import AuthLayout from '../layout/AuthLayout';
-import Login from '../pages/auth/Login';
-import SignUP from '../pages/auth/SignUP';
+import DashboardLayout from '../layout/dashboardlayout/DashboardLayout';
+import Dashboard from '../pages/admin/dashboard/Dashboard';
+import Profile from '../pages/admin/profile/Profile';
+import Forms from '../pages/admin/forms/Forms';
+import Charts from '../pages/admin/charts/Charts';
+import Tables from '../pages/admin/tables/Tables';
+import AuthLayout from '../layout/authlayout/AuthLayout';
+import Login from '../pages/auth/login/Login';
+import SignUp from '../pages/auth/signup/SignUP';
+import OtpVarification from '../pages/auth/OtpVarification/OtpVarification';
+import ForgotPassword from '../pages/auth/forgotpassword/ForgotPassword';
 
 const routes = [
   {
@@ -30,7 +32,9 @@ const routes = [
       
     ],
   },
-  { path: 'signup', element: <SignUP /> },
+  { path: 'signup', element: <SignUp /> },
+  { path: 'otp-varification', element: <OtpVarification /> },
+  { path: 'forgot-password', element: <ForgotPassword /> },
 ];
 
 const RoutesComponent = () => {

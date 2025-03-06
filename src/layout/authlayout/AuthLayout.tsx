@@ -1,6 +1,6 @@
 import React from 'react'
-import Login from '../pages/auth/Login'
-import AuthHeader from './components/AuthHeader'
+import Login from '../../pages/auth/login/Login'
+import AuthHeader from '../../pages/auth/authheader/AuthHeader'
 
 const AuthLaout: React.FC = () => {
   return (
