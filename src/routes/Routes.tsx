@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ConstRoute } from '../utils/Constant';
-import DashboardLayout from '../layout/dashboardLayout/DashboardLayout';
+import DashboardLayout from '../layout/dashboardlayout/DashboardLayout';
 import Dashboard from '../pages/admin/dashboard/Dashboard';
 import Profile from '../pages/admin/profile/Profile';
 import Forms from '../pages/admin/forms/Forms';
 import Charts from '../pages/admin/charts/Charts';
 import Tables from '../pages/admin/tables/Tables';
-import AuthLayout from '../layout/authLayout/AuthLayout';
+import AuthLayout from '../layout/authlayout/AuthLayout';
 import Login from '../pages/auth/login/Login';
 import SignUp from '../pages/auth/signup/SignUP';
-import ForgotPassword from '../pages/auth/forgotPassword/ForgotPassword';
+import ForgotPassword from '../pages/auth/forgotpassword/ForgotPassword';
 import OtpVerification from '../pages/auth/otpVerification/OtpVerification';
 
 const routes = [
