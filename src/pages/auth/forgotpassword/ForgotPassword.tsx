@@ -54,7 +54,7 @@ const ForgotPassword: React.FC = () => {
                                     type="submit"
                                     className="w-full bg-gray-800 text-white p-2 mt-2 rounded-md hover:bg-gray-600 cursor-pointer"
                                 >
-                                    Verify OTP
+                                    Send OTP
                                 </button>
                             </form>
                             <p className="mt-3 text-center text-gray-600">

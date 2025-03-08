@@ -30,9 +30,8 @@ const Sidebar: React.FC = () => {
           <Link
             key={to}
             to={to}
-            className={`flex items-center gap-3 font-medium px-2 py-2 rounded-md transition ${
-              location.pathname === to ? "bg-gray-800 text-white" : "text-gray-700 hover:text-white hover:bg-gray-800"
-            }`}
+            className={`flex items-center gap-3 font-medium px-2 py-2 rounded-md transition ${location.pathname === to ? "bg-gray-800 text-white" : "text-gray-700 hover:text-white hover:bg-gray-800"
+              }`}
           >
             {icon} {sidebarOpen && label}
           </Link>

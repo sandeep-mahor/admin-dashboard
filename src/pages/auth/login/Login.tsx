@@ -7,9 +7,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Login: React.FC = () => {
-
     const [showPassword, setShowPassword] = useState<boolean>(false);
-
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -25,8 +23,8 @@ const Login: React.FC = () => {
     });
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <div className="text-sm grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-lg overflow-hidden max-w-4xl w-full m-5">
+        <div className="flex flex-col items-center justify-center ">
+            <div className="text-sm grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-lg overflow-hidden max-w-4xl w-full">
                 <div className="hidden md:flex items-center justify-center bg-gray-50 ">
                     <img
                         src="https://cdni.iconscout.com/illustration/free/thumb/free-sales-team-illustration-download-in-svg-png-gif-file-formats--business-pack-illustrations-1730192.png"
