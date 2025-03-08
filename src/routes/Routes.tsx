@@ -1,16 +1,16 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ConstRoute } from '../utils/Constant';
-import DashboardLayout from '../layout/dashboardlayout/DashboardLayout';
+import DashboardLayout from '../layout/dashboardLayout/DashboardLayout';
 import Dashboard from '../pages/admin/dashboard/Dashboard';
 import Profile from '../pages/admin/profile/Profile';
 import Forms from '../pages/admin/forms/Forms';
 import Charts from '../pages/admin/charts/Charts';
 import Tables from '../pages/admin/tables/Tables';
-import AuthLayout from '../layout/authlayout/AuthLayout';
+import AuthLayout from '../layout/authLayout/AuthLayout';
 import Login from '../pages/auth/login/Login';
 import SignUp from '../pages/auth/signup/SignUP';
-import OtpVarification from '../pages/auth/OtpVarification/OtpVarification';
-import ForgotPassword from '../pages/auth/forgotpassword/ForgotPassword';
+import ForgotPassword from '../pages/auth/forgotPassword/ForgotPassword';
+import OtpVerification from '../pages/auth/otpVerification/OtpVerification';
 
 const routes = [
   {
@@ -28,13 +28,12 @@ const routes = [
     path: '/auth',
     element: <AuthLayout />,
     children: [
-      { path: 'login', element: <Login /> },
-      
+      { path: ConstRoute.login, element: <Login /> },
+      { path: ConstRoute.signup, element: <SignUp /> },
+      { path: ConstRoute.otpverification, element: <OtpVerification /> },
+      { path: ConstRoute.forgotpassword, element: <ForgotPassword /> },
     ],
   },
-  { path: 'signup', element: <SignUp /> },
-  { path: 'otp-varification', element: <OtpVarification /> },
-  { path: 'forgot-password', element: <ForgotPassword /> },
 ];
 
 const RoutesComponent = () => {
@@ -58,3 +57,4 @@ const RoutesComponent = () => {
 };
 
 export default RoutesComponent;
+

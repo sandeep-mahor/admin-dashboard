@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
           <Menu size={24} />
         </button>
       </div>
-      <nav className="mt-10 flex flex-col gap-3 ml-2 text-sm">
+      <nav className="mt-10 flex flex-col ml-2 gap-3 text-sm">
         {[
           { to: "/", label: "Dashboard", icon: <Home size={24} /> },
           { to: ConstRoute.profile, label: "Profile", icon: <User size={24} /> },
@@ -30,9 +30,8 @@ const Sidebar: React.FC = () => {
           <Link
             key={to}
             to={to}
-            className={`flex items-center gap-3 font-medium px-2 py-2 rounded-md transition ${
-              location.pathname === to ? "bg-gray-800 text-white" : "text-gray-700 hover:text-white hover:bg-gray-800"
-            }`}
+            className={`flex items-center gap-3 font-medium px-2 py-2 rounded-md transition ${location.pathname === to ? "bg-gray-800 text-white" : "text-gray-700 hover:text-white hover:bg-gray-800"
+              }`}
           >
             {icon} {sidebarOpen && label}
           </Link>
