@@ -1,14 +1,16 @@
-import React from 'react'
-import Login from '../../pages/auth/login/Login'
-import AuthHeader from '../../pages/auth/authheader/AuthHeader'
+import React from 'react';
+import AuthHeader from '../AuthHeader';
+import { Outlet } from 'react-router-dom';
 
-const AuthLaout: React.FC = () => {
+const AuthLayout: React.FC = () => {
   return (
     <div>
-      <AuthHeader/>
-      <Login/>
+      <AuthHeader />
+      <main>
+        <Outlet />
+      </main>
     </div>
-  )
-}
+  );
+};
 
-export default AuthLaout
+export default AuthLayout;

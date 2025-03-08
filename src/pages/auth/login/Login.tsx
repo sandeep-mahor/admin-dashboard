@@ -25,9 +25,9 @@ const Login: React.FC = () => {
     });
 
     return (
-        <div className="h-screen flex items-center justify-center bg-gray-100 p-4">
-            <div className="text-sm grid grid-cols-1 md:grid-cols-2 bg-blue-100 rounded-2xl shadow-lg overflow-hidden max-w-4xl w-full">
-                <div className="hidden md:flex items-center justify-center bg-gray-50 p-5">
+        <div className="flex flex-col items-center justify-center">
+            <div className="text-sm grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-lg overflow-hidden max-w-4xl w-full m-5">
+                <div className="hidden md:flex items-center justify-center bg-gray-50 ">
                     <img
                         src="https://cdni.iconscout.com/illustration/free/thumb/free-sales-team-illustration-download-in-svg-png-gif-file-formats--business-pack-illustrations-1730192.png"
                         alt="Illustration"
@@ -36,7 +36,7 @@ const Login: React.FC = () => {
                 </div>
                 <div className="flex flex-col p-8 bg-gray-50">
                     <div className="bg-white p-8 rounded shadow-lg">
-                        <h2 className="text-2xl font-bold text-indigo-600 mb-6 text-center">
+                        <h2 className="text-2xl font-bold text-indigo-600 mb-4 text-center">
                             <span className="text-gray-800">Login</span>
                         </h2>
                         <hr className="mb-5" />
@@ -52,7 +52,7 @@ const Login: React.FC = () => {
                             <div className="flex-grow border-t border-black-300"></div>
                         </div>
                         <form onSubmit={formik.handleSubmit}>
-                            <div className="mb-4 relative">
+                            <div className="mb-3 relative">
                                 <MdEmail className="absolute left-3 top-3 text-gray-800" />
                                 <input
                                     type="email"
@@ -64,7 +64,7 @@ const Login: React.FC = () => {
                                     <div className="text-red-500 text-sm">{formik.errors.email}</div>
                                 ) : null}
                             </div>
-                            <div className="mb-4 relative">
+                            <div className="mb-3 relative">
                                 <FaKey className="absolute left-3 top-3 text-gray-800" />
                                 <input
                                     type={showPassword ? "text" : "password"}
@@ -82,18 +82,18 @@ const Login: React.FC = () => {
                                     <div className="text-red-500 text-sm">{formik.errors.password}</div>
                                 ) : null}
                             </div>
-                            <div className="flex justify-between items-center mb-6">
+                            <div className="flex justify-between items-center mb-4">
                                 <label className="flex items-center cursor-pointer">
                                     <input type="checkbox" className="mr-2 cursor-pointer" /> Remember me
                                 </label>
-                                <Link to="/forgot-password" className="text-indigo-600">Forgot Password</Link>
+                                <Link to="/auth/forgot-password" className="text-indigo-600">Forgot Password</Link>
                             </div>
                             <button type="submit" className="w-full bg-gray-800 text-white p-2 rounded-md hover:bg-gray-500 cursor-pointer">
                                 Login
                             </button>
                         </form>
-                        <p className="mt-4 text-center text-black-600">
-                            Don't have an account? <Link to="/signup" className="text-indigo-600">Register</Link>
+                        <p className="mt-2 text-center text-black-600">
+                            Don't have an account? <Link to="/auth/signup" className="text-indigo-600">SignUp</Link>
                         </p>
                     </div>
                 </div>

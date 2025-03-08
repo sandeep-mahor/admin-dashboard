@@ -6,19 +6,19 @@ type RoutePaths = {
     tables: string;
     login: string;
     signup: string;
-    otpvarification: string;
+    otpverification: string;
     forgotpassword: string;
   };
   
   export const ConstRoute: RoutePaths = {
-    profile: "/profile",
-    dashboard: "/dashboard",
-    forms: "/forms",
-    charts: "/charts",
-    tables: "/tables",
-    login: "/login",
-    signup: "/signup",
-    otpvarification: "/otp-varification",
-    forgotpassword: "/forgot-password",
+    profile: "profile",
+    dashboard: "dashboard",
+    forms: "forms",
+    charts: "charts",
+    tables: "tables",
+    login: "login",
+    signup: "signup",
+    otpverification: "otp-verification",
+    forgotpassword: "forgot-password",
   };
   

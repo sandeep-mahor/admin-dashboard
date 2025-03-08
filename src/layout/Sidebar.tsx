@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
           <Menu size={24} />
         </button>
       </div>
-      <nav className="mt-10 flex flex-col gap-3 ml-2 text-sm">
+      <nav className="mt-10 flex flex-col ml-2 gap-3 text-sm">
         {[
           { to: "/", label: "Dashboard", icon: <Home size={24} /> },
           { to: ConstRoute.profile, label: "Profile", icon: <User size={24} /> },
