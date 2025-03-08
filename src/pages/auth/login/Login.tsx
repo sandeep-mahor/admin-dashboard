@@ -2,11 +2,12 @@ import { useState } from "react";
 import { FaFacebookF, FaKey } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Login: React.FC = () => {
+    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const formik = useFormik({
         initialValues: {
@@ -19,6 +20,7 @@ const Login: React.FC = () => {
         }),
         onSubmit: values => {
             console.log("Form values", values);
+            navigate('/')
         }
     });
 
